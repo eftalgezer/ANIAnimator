@@ -1,7 +1,7 @@
 """
 Evaluate unit tests for the ANIAnimator library.
 """
-from .tests import * 
+from .tests import *
 
 clear_temp()
 test_animate()
