@@ -11,6 +11,7 @@ mpath = mfile.replace("/ANIAnimator/__init__.py", "")
 
 
 def test_animate():
+    """Tests for animate"""
     shutil.copy(
         f"{mpath}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
         f"{mpath}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
@@ -20,6 +21,7 @@ def test_animate():
 
 
 def test_split_ani():
+    """Tests for split_ani"""
     shutil.copy(
         f"{mpath}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
         f"{mpath}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
@@ -156,19 +158,21 @@ def test_split_ani():
 
 
 def test_write_xyzs():
+    """Tests for write_xyzs"""
     shutil.copy(
         f"{mpath}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
         f"{mpath}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
     )
     os.chdir(f"{mpath}{os.sep}tests{os.sep}assets{os.sep}temp")
     print(write_xyzs_tester(split_ani_tester("C-merged.ANI")))
-    assert write_xyzs_tester(split_ani_tester("C-merged.ANI")) == glob.glob("ANIAnimator_temp/*.xyz")
+    assert write_xyzs_tester(split_ani_tester("C-merged.ANI")) == sort_(glob.glob("ANIAnimator_temp/*.xyz"))
 
 
 def test_write_pngs():
+    """Tests for write_pngs"""
     shutil.copy(
         f"{mpath}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
         f"{mpath}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
     )
     os.chdir(f"{mpath}{os.sep}tests{os.sep}assets{os.sep}temp")
-    assert write_pngs_tester(write_xyzs_tester(split_ani_tester("C-merged.ANI"))) == glob.glob("ANIAnimator_temp/*.png")
+    assert write_pngs_tester(write_xyzs_tester(split_ani_tester("C-merged.ANI"))) == sort_(glob.glob("ANIAnimator_temp/*.png"))

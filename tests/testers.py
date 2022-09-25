@@ -4,6 +4,7 @@ Unit testers for the ANIAnimator library.
 import glob
 import os
 import shutil
+import re
 from ANIAnimator import __file__ as mfile
 from ANIAnimator.core import animate
 from ANIAnimator.helpers import split_ani, write_xyzs, write_pngs
@@ -24,7 +25,22 @@ def clear_temp():
             print(f'Failed to delete {filepath}. Reason: {e}')
 
 
+def sort_(files):
+    """Naive sort function for files"""
+    sortedfiles = []
+    match = [re.search(rf"{os.sep}([0-9]+)\.[A-Za-z]+", file) for file in files]
+    sortedmatch = [[m[0], m[1]] for m in match]
+    sortedmatch = [x for _, x in sorted(int(m[1])) for m in sortedmatch], sortedmatch
+    for s in sortedmatch:
+        for file in files:
+            filematch = re.search(rf"{os.sep}[0-9]+\.[A-Za-z]+", f)
+            if s[0] == filematch[0] and file not in sortedfiles:
+                sortedfiles.append(file)
+    return sortedfiles
+
+
 def animate_tester(anifile=None, width=None, height=None, loop=None, bonds_param=None):
+    """Tester function for animate"""
     fname = anifile.split(".")[0]
     animate(
         anifile=anifile,
@@ -37,12 +53,15 @@ def animate_tester(anifile=None, width=None, height=None, loop=None, bonds_param
 
 
 def split_ani_tester(anifile):
+    """Tester function for split_ani"""
     return split_ani(anifile)
 
 
 def write_xyzs_tester(xyzs):
+    """Tester function for write_xyzs"""
     return write_xyzs(xyzs)
 
 
 def write_pngs_tester(xyzfiles, width=None, height=None, bonds_param=None):
+    """Tester function for write_pngs"""
     return write_pngs(xyzfiles, width=width, height=height, bonds_param=bonds_param)
