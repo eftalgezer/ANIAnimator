@@ -3,16 +3,16 @@
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
 [![Python package](https://github.com/eftalgezer/ANIAnimator/actions/workflows/python-package.yml/badge.svg)](https://github.com/eftalgezer/ANIAnimator/actions/workflows/python-package.yml)
 [![codecov](https://codecov.io/gh/eftalgezer/ANIAnimator/branch/main/graph/badge.svg?token=Q9TJFIN1U1)](https://codecov.io/gh/eftalgezer/ANIAnimator)
-[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/4ff526bd45e642bb81b300f2243baef2)](https://www.codacy.com/gh/eftalgezer/ANIAnimator/dashboard?utm_source=github.com&utm_medium=referral&utm_content=eftalgezer/ANIAnimator&utm_campaign=Badge_Coverage)
+[![Codacy Badge]()](https://www.codacy.com/gh/eftalgezer/ANIAnimator/dashboard?utm_source=github.com&utm_medium=referral&utm_content=eftalgezer/ANIAnimator&utm_campaign=Badge_Coverage)
 [![PyPI download month](https://img.shields.io/pypi/dm/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
 [![PyPI download week](https://img.shields.io/pypi/dw/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
 [![PyPI download day](https://img.shields.io/pypi/dd/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
 ![GitHub all releases](https://img.shields.io/github/downloads/eftalgezer/ANIAnimator/total?style=flat)
 [![GitHub contributors](https://img.shields.io/github/contributors/eftalgezer/ANIAnimator.svg)](https://github.com/eftalgezer/ANIAnimator/graphs/contributors/)
-[![CodeFactor](https://www.codefactor.io/repository/github/eftalgezer/siestastepper/badge)](https://www.codefactor.io/repository/github/eftalgezer/siestastepper)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4ff526bd45e642bb81b300f2243baef2)](https://www.codacy.com/gh/eftalgezer/ANIAnimator/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eftalgezer/ANIAnimator&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/eftalgezer/ANIAnimator/badge)](https://www.codefactor.io/repository/github/eftalgezer/ANIAnimator)
+[![Codacy Badge]()](https://www.codacy.com/gh/eftalgezer/ANIAnimator/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eftalgezer/ANIAnimator&amp;utm_campaign=Badge_Grade)
 [![PyPI license](https://img.shields.io/pypi/l/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
-[![DOI](https://zenodo.org/badge/532944393.svg)](https://zenodo.org/badge/latestdoi/532944393)
+[![DOI]()]()
 
 ANIAnimator makes the GIF file from a given chemical ANI file.
 
