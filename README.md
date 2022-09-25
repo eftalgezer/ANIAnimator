@@ -3,7 +3,7 @@
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
 [![Python package](https://github.com/eftalgezer/ANIAnimator/actions/workflows/python-package.yml/badge.svg)](https://github.com/eftalgezer/ANIAnimator/actions/workflows/python-package.yml)
 [![codecov](https://codecov.io/gh/eftalgezer/ANIAnimator/branch/main/graph/badge.svg?token=Q9TJFIN1U1)](https://codecov.io/gh/eftalgezer/ANIAnimator)
-[![Codacy Badge]()](https://www.codacy.com/gh/eftalgezer/ANIAnimator/dashboard?utm_source=github.com&utm_medium=referral&utm_content=eftalgezer/ANIAnimator&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b0a14b0216c4451a8743ebb9712eac64)](https://www.codacy.com/gh/eftalgezer/ANIAnimator/dashboard?utm_source=github.com&utm_medium=referral&utm_content=eftalgezer/ANIAnimator&utm_campaign=Badge_Coverage)
 [![PyPI download month](https://img.shields.io/pypi/dm/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
 [![PyPI download week](https://img.shields.io/pypi/dw/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
 [![PyPI download day](https://img.shields.io/pypi/dd/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
