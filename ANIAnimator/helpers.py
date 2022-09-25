@@ -2,6 +2,7 @@
 Helper functions for ANIAnimator
 """
 
+from __future__ import absolute_import
 import os
 import re
 import mogli
@@ -15,10 +16,10 @@ ANI_PATTERN = re.compile(
 
 def split_ani(anifile):
     """Split ANI files to xyz"""
-    with open(anifile, encoding="utf-8") as f:
+    with open(anifile, encoding="utf-8") as file:
         print(f"Opening {anifile}")
-        ani = f.read()
-        f.close()
+        ani = file.read()
+        file.close()
         return ANI_PATTERN.findall(ani)
 
 
@@ -29,10 +30,10 @@ def write_xyzs(xyzs):
     if not os.path.exists("ANIAnimator_temp"):
         os.mkdir("ANIAnimator_temp")
     for i, xyz in enumerate(xyzs):
-        with open(f"ANIAnimator_temp{os.sep}{i}.xyz", "w", encoding="utf-8") as f:
+        with open(f"ANIAnimator_temp{os.sep}{i}.xyz", "w", encoding="utf-8") as file:
             print(f"Creating xyz files ({i + 1}/{len(xyzs)})", end="\r")
-            f.write(xyz[0])
-            f.close()
+            file.write(xyz[0])
+            file.close()
         xyzfiles.append(f"ANIAnimator_temp{os.sep}{i}.xyz")
     return xyzfiles
 

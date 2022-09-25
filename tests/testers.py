@@ -1,6 +1,7 @@
 """
 Unit testers for the ANIAnimator library.
 """
+from __future__ import absolute_import
 import glob
 import os
 import shutil
@@ -9,13 +10,13 @@ from ANIAnimator import __file__ as mfile
 from ANIAnimator.core import animate
 from ANIAnimator.helpers import split_ani, write_xyzs, write_pngs
 
-mpath = mfile.replace("/ANIAnimator/__init__.py", "")
+MPATH = mfile.replace("/ANIAnimator/__init__.py", "")
 
 
 def clear_temp():
     """Clears the temp folder"""
-    for filename in os.listdir(f"{mpath}{os.sep}tests{os.sep}assets{os.sep}temp"):
-        filepath = os.path.join(f"{mpath}{os.sep}tests{os.sep}assets{os.sep}temp", filename)
+    for filename in os.listdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp"):
+        filepath = os.path.join(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp", filename)
         try:
             if os.path.isfile(filepath) or os.path.islink(filepath):
                 os.unlink(filepath)

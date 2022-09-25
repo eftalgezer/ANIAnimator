@@ -2,6 +2,7 @@
 Terminal client for ANIAnimator
 """
 
+from __future__ import absolute_import
 import contextlib
 import sys
 from .core import animate

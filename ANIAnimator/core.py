@@ -5,7 +5,7 @@ Module bundling all functions needed to animate an ANI file
 from __future__ import absolute_import
 import shutil
 from PIL import Image
-from .helpers import *
+from .helpers import split_ani, write_xyzs, write_pngs
 
 
 def animate(anifile=None, width=None, height=None, loop=None, bonds_param=None):
