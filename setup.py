@@ -43,7 +43,7 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
     ],
     keywords="ANI, GIF, animation, molecular calculations, chemistry, physics," +
-             "ANI to GIF converter",
+    "ANI to GIF converter",
     packages=["ANIAnimator"],
     install_requires=[
         "mogli",
