@@ -5,6 +5,8 @@ from __future__ import absolute_import
 import glob
 import os
 import shutil
+import io
+import sys
 import re
 from ANIAnimator import __file__ as mfile
 from ANIAnimator.core import animate
@@ -66,3 +68,12 @@ def write_xyzs_tester(xyzs):
 def write_pngs_tester(xyzfiles, width=None, height=None, bonds_param=None):
     """Tester function for write_pngs"""
     return write_pngs(xyzfiles, width=width, height=height, bonds_param=bonds_param)
+
+
+def main_tester(command):
+    capturedoutput = io.StringIO()
+    sys.stdout = capturedoutput
+    from ANIAnimator.__main__ import main as rtmain
+    rtmain(args=command.split(" "))
+    sys.stdout = sys.__stdout__
+    return capturedoutput.getvalue()

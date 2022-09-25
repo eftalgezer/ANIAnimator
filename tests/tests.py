@@ -11,7 +11,8 @@ from .testers import (
     animate_tester,
     split_ani_tester,
     write_xyzs_tester,
-    write_pngs_tester
+    write_pngs_tester,
+    main_tester
 )
 
 MPATH = mfile.replace("/ANIAnimator/__init__.py", "")
@@ -184,3 +185,11 @@ def test_write_pngs():
     os.chdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp")
     assert write_pngs_tester(write_xyzs_tester(split_ani_tester("C-merged.ANI"))) == sort_(
         glob.glob("ANIAnimator_temp/*.png"))
+
+def test_main():
+    shutil.copy(
+        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
+        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
+    )
+    os.chdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp")
+    assert "is created" in main_tester("ANIAnimator C-merged.ANI")
