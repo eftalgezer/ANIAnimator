@@ -19,13 +19,10 @@ def clear_temp():
     """Clears the temp folder"""
     for filename in os.listdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp"):
         filepath = os.path.join(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp", filename)
-        try:
-            if os.path.isfile(filepath) or os.path.islink(filepath):
-                os.unlink(filepath)
-            elif os.path.isdir(filepath):
-                shutil.rmtree(filepath)
-        except Exception as e:
-            print(f'Failed to delete {filepath}. Reason: {e}')
+        if os.path.isfile(filepath) or os.path.islink(filepath):
+            os.unlink(filepath)
+        elif os.path.isdir(filepath):
+            shutil.rmtree(filepath)
 
 
 def sort_(files):
