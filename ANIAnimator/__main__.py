@@ -33,4 +33,5 @@ def main(args):
     animate(args[1], width, height, loop, bonds_param)
 
 
-main(sys.argv)
+if __name__ == "__main__":
+    main(sys.argv)
