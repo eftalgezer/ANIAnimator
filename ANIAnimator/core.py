@@ -2,12 +2,14 @@
 Module bundling all functions needed to animate an ANI file
 """
 
+from __future__ import absolute_import
 import shutil
 from PIL import Image
 from .helpers import *
 
 
 def animate(anifile=None, width=None, height=None, loop=None, bonds_param=None):
+    """Create a gif file from given ANI file"""
     if width is None:
         width = 1920
     if height is None:

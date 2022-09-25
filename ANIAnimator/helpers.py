@@ -14,6 +14,7 @@ ANI_PATTERN = re.compile(
 
 
 def split_ani(anifile):
+    """Split ANI files to xyz"""
     with open(anifile, encoding="utf-8") as f:
         print(f"Opening {anifile}")
         ani = f.read()
@@ -22,6 +23,7 @@ def split_ani(anifile):
 
 
 def write_xyzs(xyzs):
+    """Write xyz files"""
     xyzfiles = []
     print("Making directory ANIAnimator_temp")
     if not os.path.exists("ANIAnimator_temp"):
@@ -36,6 +38,7 @@ def write_xyzs(xyzs):
 
 
 def write_pngs(xyzfiles, width=None, height=None, bonds_param=None):
+    """Write png files"""
     if width is None:
         width = 1920
     if height is None:
