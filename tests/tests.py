@@ -7,7 +7,6 @@ import shutil
 import glob
 from ANIAnimator import __file__ as mfile
 from .testers import (
-    clear_temp,
     sort_,
     animate_tester,
     split_ani_tester,
