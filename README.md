@@ -10,7 +10,7 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/eftalgezer/ANIAnimator/total?style=flat)
 [![GitHub contributors](https://img.shields.io/github/contributors/eftalgezer/ANIAnimator.svg)](https://github.com/eftalgezer/ANIAnimator/graphs/contributors/)
 [![CodeFactor](https://www.codefactor.io/repository/github/eftalgezer/ANIAnimator/badge)](https://www.codefactor.io/repository/github/eftalgezer/ANIAnimator)
-[![Codacy Badge]()](https://www.codacy.com/gh/eftalgezer/ANIAnimator/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eftalgezer/ANIAnimator&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b0a14b0216c4451a8743ebb9712eac64)](https://www.codacy.com/gh/eftalgezer/ANIAnimator/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eftalgezer/ANIAnimator&amp;utm_campaign=Badge_Grade)
 [![PyPI license](https://img.shields.io/pypi/l/ANIAnimator.svg)](https://pypi.python.org/pypi/ANIAnimator/)
 [![DOI]()]()
 
