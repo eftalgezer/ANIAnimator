@@ -30,10 +30,10 @@ def sort_(files):
     sortedfiles = []
     match = [re.search(rf"{os.sep}([0-9]+)\.[A-Za-z]+", file) for file in files]
     sortedmatch = [[m[0], m[1]] for m in match]
-    sortedmatch = [x for _, x in sorted(int(m[1])) for m in sortedmatch], sortedmatch
+    sortedmatch = [x for _, x in sorted(int(m[1]) for m in sortedmatch)], sortedmatch
     for s in sortedmatch:
         for file in files:
-            filematch = re.search(rf"{os.sep}[0-9]+\.[A-Za-z]+", f)
+            filematch = re.search(rf"{os.sep}[0-9]+\.[A-Za-z]+", file)
             if s[0] == filematch[0] and file not in sortedfiles:
                 sortedfiles.append(file)
     return sortedfiles
