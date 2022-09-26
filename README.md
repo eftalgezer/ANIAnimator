@@ -53,11 +53,7 @@ ANIAnimator.animate(anifile="graphene.ANI", width=1920, height=1080) # defaults 
 ANIAnimator.animate(anifile="graphene.ANI", loop=1) # default is 0; 0 means loop, 1 means no loop
 
 ANIAnimator.animate(bonds_param=1.3) # default is 1.3, sets the bonds between atoms
-
 ```
-
-
-
 ### In terminal
 
 #### Simple usage
@@ -84,10 +80,19 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Citation
-If you are using ANIAnimator, please citate relevant version. You can find the relevant citation [here]().
+If you are using ANIAnimator, please citate relevant version. You can find the relevant citation [here](https://doi.org/10.5281/zenodo.7112024).
 
 ```bibtex
-
+@software{eftal_gezer_2022_7112025,
+  author       = {Eftal Gezer},
+  title        = {eftalgezer/ANIAnimator: v0.0.1},
+  month        = sep,
+  year         = 2022,
+  publisher    = {Zenodo},
+  version      = {v0.0.1},
+  doi          = {10.5281/zenodo.7112025},
+  url          = {https://doi.org/10.5281/zenodo.7112025}
+}
 ```
 
 ## License
