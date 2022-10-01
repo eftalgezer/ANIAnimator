@@ -33,6 +33,7 @@ $ pip install -U git+https://github.com/eftalgezer/ANIAnimator.git
 ## Tutorial
 
 - [ANIAnimator v0.0.1 tutorial](https://beyondthearistotelian.blogspot.com/2022/09/anianimator-v001-tutorial.html)
+- [What is new in ANIAnimator v0.1.0?](https://beyondthearistotelian.blogspot.com/2022/10/what-is-new-in-anianimator-v010.html)
 
 ## Usage
 
@@ -52,7 +53,11 @@ ANIAnimator.animate(anifile="graphene.ANI", width=1920, height=1080) # defaults 
 
 ANIAnimator.animate(anifile="graphene.ANI", loop=1) # default is 0; 0 means loop, 1 means no loop
 
-ANIAnimator.animate(bonds_param=1.3) # default is 1.3, sets the bonds between atoms
+ANIAnimator.animate(anifile="graphene.ANI", bonds_param=1.3) # default is 1.3, sets the bonds between atoms
+
+ANIAnimator.animate(anifile="graphene.ANI", camera=((40, 0, 0),
+                                                    (0, 0, 0),
+                                                    (0, 1, 0))) # if you need to set the camera
 ```
 ### In terminal
 
@@ -65,9 +70,11 @@ $ python -m ANIAnimator graphene.ANI
 #### Advance usage
 
 ```sh
-$ python -m ANIAnimator <ANI file> <width> <height> <loop> <bonds_param>
+$ python -m ANIAnimator <ANI file> <width> <height> <loop> <bonds_param> camera=<param>
 
 $ python -m ANIAnimator graphene.ANI 1920 1080 1 1.3
+
+$ python -m ANIAnimator graphene.ANI 1920 1080 1 1.3 camera=40,0,0,0,0,0,0,1,0 # if you need to set the camera
 
 ```
 

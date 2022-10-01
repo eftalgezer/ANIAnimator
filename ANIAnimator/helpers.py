@@ -38,7 +38,7 @@ def write_xyzs(xyzs):
     return xyzfiles
 
 
-def write_pngs(xyzfiles, width=None, height=None, bonds_param=None):
+def write_pngs(xyzfiles, width=None, height=None, bonds_param=None, camera=None):
     """Write png files"""
     if width is None:
         width = 1920
@@ -56,7 +56,8 @@ def write_pngs(xyzfiles, width=None, height=None, bonds_param=None):
             f"ANIAnimator_temp{os.sep}{i}.png",
             width=width,
             height=height,
-            bonds_param=bonds_param
+            bonds_param=bonds_param,
+            camera=camera
         )
         pngfiles.append(f"ANIAnimator_temp{os.sep}{i}.png")
     return pngfiles

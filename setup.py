@@ -1,5 +1,5 @@
 """
-Setup file for ANIanimator
+Setup file for ANIAnimator
 """
 from __future__ import absolute_import
 import pathlib
@@ -12,11 +12,11 @@ LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="ANIAnimator",
-    version="0.0.1",
+    version="0.1.0",
     description="ANIAnimator makes the GIF file from a given chemical ANI file",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
-    url="https://github.com/eftalgezer/ANIanimator",
+    url="https://github.com/eftalgezer/ANIAnimator",
     author="Eftal Gezer",
     author_email="eftal.gezer@astrobiyoloji.org",
     classifiers=[

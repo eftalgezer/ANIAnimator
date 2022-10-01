@@ -8,7 +8,7 @@ from PIL import Image
 from .helpers import split_ani, write_xyzs, write_pngs
 
 
-def animate(anifile=None, width=None, height=None, loop=None, bonds_param=None):
+def animate(anifile=None, width=None, height=None, loop=None, bonds_param=None, camera=None):
     """Create a gif file from given ANI file"""
     if width is None:
         width = 1920
@@ -20,7 +20,7 @@ def animate(anifile=None, width=None, height=None, loop=None, bonds_param=None):
         bonds_param = 1.3
     fname = anifile.split(".")[0]
     frames = []
-    imgfiles = write_pngs(write_xyzs(split_ani(anifile)), width, height, bonds_param)
+    imgfiles = write_pngs(write_xyzs(split_ani(anifile)), width, height, bonds_param, camera)
     print()
     for i, imgfile in enumerate(imgfiles):
         print(f"Creating GIF ({i + 1}/{len(imgfiles)})", end="\r")
