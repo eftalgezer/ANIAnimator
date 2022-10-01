@@ -172,7 +172,6 @@ def test_write_xyzs():
         f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
     )
     os.chdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp")
-    print(write_xyzs_tester(split_ani_tester("C-merged.ANI")))
     assert write_xyzs_tester(split_ani_tester("C-merged.ANI")) == sort_(glob.glob("ANIAnimator_temp/*.xyz"))
 
 

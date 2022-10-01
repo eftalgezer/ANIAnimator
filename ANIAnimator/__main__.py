@@ -35,7 +35,7 @@ def main(args):
         bonds_param = 1.3
     if camera == "default":
         camera = None
-    else:
+    elif camera is not None:
         cameraparams = camera.split(",")
         camera = (
             (int(cameraparams[0]), int(cameraparams[1]), int(cameraparams[2])),
