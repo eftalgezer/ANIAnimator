@@ -90,15 +90,15 @@ Please make sure to update tests as appropriate.
 If you are using ANIAnimator, please citate relevant version. You can find the relevant citation [here](https://doi.org/10.5281/zenodo.7112024).
 
 ```bibtex
-@software{eftal_gezer_2022_7112025,
+@software{eftal_gezer_2022_7133028,
   author       = {Eftal Gezer},
-  title        = {eftalgezer/ANIAnimator: v0.0.1},
-  month        = sep,
+  title        = {eftalgezer/ANIAnimator: v0.1.0},
+  month        = oct,
   year         = 2022,
   publisher    = {Zenodo},
-  version      = {v0.0.1},
-  doi          = {10.5281/zenodo.7112025},
-  url          = {https://doi.org/10.5281/zenodo.7112025}
+  version      = {v0.1.0},
+  doi          = {10.5281/zenodo.7133028},
+  url          = {https://doi.org/10.5281/zenodo.7133028}
 }
 ```
 
