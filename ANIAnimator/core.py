@@ -3,6 +3,7 @@ Module bundling all functions needed to animate an ANI file
 """
 
 from __future__ import absolute_import
+from __future__ import print_function
 import shutil
 from PIL import Image
 from .helpers import split_ani, write_xyzs, write_pngs
