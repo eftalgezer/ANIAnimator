@@ -29,7 +29,7 @@ def sort_(files):
     """Naive sort function for files"""
     sortedfiles = []
     match = [re.search(r"{0}([0-9]+)\.[A-Za-z]+".format(os.sep), file) for file in files]
-    sortedmatch = [[m[0], m[1]] for m in match]
+    sortedmatch = [[m.group(0), m.group(1)] for m in match]
     sortedmatch = [x for _, x in sorted(zip([int(m[1]) for m in sortedmatch], sortedmatch))]
     for s in sortedmatch:
         for file in files:

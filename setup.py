@@ -12,7 +12,7 @@ LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="ANIAnimator",
-    version="0.1.0",
+    version="0.2.0",
     description="ANIAnimator makes the GIF file from a given chemical ANI file",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
