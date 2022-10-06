@@ -12,7 +12,7 @@ from ANIAnimator import __file__ as mfile
 from ANIAnimator.core import animate
 from ANIAnimator.helpers import split_ani, write_xyzs, write_pngs
 
-MPATH = mfile.replace("/ANIAnimator/__init__.py", "")
+MPATH = mfile.replace("{0}ANIAnimator{0}__init__.py".format(os.sep), "")
 
 
 def clear_temp():
