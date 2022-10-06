@@ -34,7 +34,7 @@ def sort_(files):
     for s in sortedmatch:
         for file in files:
             filematch = re.search(r"{0}[0-9]+\.[A-Za-z]+".format(os.sep), file)
-            if s[0] == filematch[0] and file not in sortedfiles:
+            if s[0] == filematch.group(0) and file not in sortedfiles:
                 sortedfiles.append(file)
     return sortedfiles
 
