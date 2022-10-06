@@ -3,7 +3,6 @@ Terminal client for ANIAnimator
 """
 
 from __future__ import absolute_import
-import contextlib
 import sys
 from .core import animate
 
@@ -15,16 +14,26 @@ def main(args):
     loop = None
     bonds_param = None
     camera = None
-    with contextlib.suppress(IndexError):
+    try:
         width = args[2]
-    with contextlib.suppress(IndexError):
+    except IndexError:
+        pass
+    try:
         height = args[3]
-    with contextlib.suppress(IndexError):
+    except IndexError:
+        pass
+    try:
         loop = args[4]
-    with contextlib.suppress(IndexError):
+    except IndexError:
+        pass
+    try:
         bonds_param = args[5]
-    with contextlib.suppress(IndexError):
+    except IndexError:
+        pass
+    try:
         camera = args[6]
+    except IndexError:
+        pass
     if width is None:
         width = 1920
     if height is None:
