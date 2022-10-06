@@ -24,7 +24,7 @@ def animate(anifile=None, width=None, height=None, loop=None, bonds_param=None, 
     imgfiles = write_pngs(write_xyzs(split_ani(anifile)), width, height, bonds_param, camera)
     print()
     for i, imgfile in enumerate(imgfiles):
-        print("Creating GIF ({0}/{1})", end="\r".format(i + 1, len(imgfiles)))
+        print("Creating GIF ({0}/{1})".format(i + 1, len(imgfiles), end="\r"))
         new_frame = Image.open(imgfile)
         frames.append(new_frame)
     frames[0].save("{0}.gif".format(fname),

@@ -32,7 +32,7 @@ def write_xyzs(xyzs):
         os.mkdir("ANIAnimator_temp")
     for i, xyz in enumerate(xyzs):
         with open("ANIAnimator_temp{0}{1}.xyz", "w", encoding="utf-8".format(os.sep, i)) as file:
-            print("Creating xyz files ({0}/{1})", end="\r".format(i + 1, len(xyzs)))
+            print("Creating xyz files ({0}/{1})".format(i + 1, len(xyzs), end="\r"))
             file.write(xyz[0])
             file.close()
         xyzfiles.append("ANIAnimator_temp{0}{1}.xyz".format(os.sep, i))
@@ -51,7 +51,7 @@ def write_pngs(xyzfiles, width=None, height=None, bonds_param=None, camera=None)
     print()
     for i, xyzfile in enumerate(xyzfiles):
         molecules = mogli.read(xyzfile)
-        print("Creating png files ({0}/{1})", end="\r".format(i + 1, len(xyzfiles)))
+        print("Creating png files ({0}/{1})".format(i + 1, len(xyzfiles), end="\r"))
         mogli.export(
             molecules[0],
             "ANIAnimator_temp{0}{1}.png".format(os.sep, i),
