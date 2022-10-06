@@ -51,14 +51,10 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         directory: ./coverage/reports/
         env_vars: OS,PYTHON
-        files: /home/runner/work/ANIAnimator/ANIAnimator/coverage.xml
+        files: coverage.xml
         flags: tests
     - name: Upload testing report to Codacy
       uses: codacy/codacy-coverage-reporter-action@v1
       with:
         project-token: ${{ secrets.codacy_token }}
-        coverage-reports: /home/runner/work/ANIAnimator/ANIAnimator/coverage.xml
-    - name: See coverage
-      run: |
-          cd /home/runner/work/ANIAnimator/ANIAnimator/
-          ls
+        coverage-reports: coverage.xml
