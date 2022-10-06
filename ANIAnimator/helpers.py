@@ -17,7 +17,7 @@ ANI_PATTERN = re.compile(
 def split_ani(anifile):
     """Split ANI files to xyz"""
     with open(anifile, encoding="utf-8") as file:
-        print(f"Opening {anifile}")
+        print("Opening {0}".format(anifile))
         ani = file.read()
         file.close()
         return ANI_PATTERN.findall(ani)
@@ -30,11 +30,11 @@ def write_xyzs(xyzs):
     if not os.path.exists("ANIAnimator_temp"):
         os.mkdir("ANIAnimator_temp")
     for i, xyz in enumerate(xyzs):
-        with open(f"ANIAnimator_temp{os.sep}{i}.xyz", "w", encoding="utf-8") as file:
-            print(f"Creating xyz files ({i + 1}/{len(xyzs)})", end="\r")
+        with open("ANIAnimator_temp{0}{1}.xyz", "w", encoding="utf-8".format(os.sep, i)) as file:
+            print("Creating xyz files ({i + 1}/{0})", end="\r".format(len(xyzs)))
             file.write(xyz[0])
             file.close()
-        xyzfiles.append(f"ANIAnimator_temp{os.sep}{i}.xyz")
+        xyzfiles.append("ANIAnimator_temp{0}{1}.xyz".format(os.sep, i))
     return xyzfiles
 
 
@@ -50,14 +50,14 @@ def write_pngs(xyzfiles, width=None, height=None, bonds_param=None, camera=None)
     print()
     for i, xyzfile in enumerate(xyzfiles):
         molecules = mogli.read(xyzfile)
-        print(f"Creating png files ({i + 1}/{len(xyzfiles)})", end="\r")
+        print("Creating png files ({i + 1}/{0})", end="\r".format(len(xyzfiles)))
         mogli.export(
             molecules[0],
-            f"ANIAnimator_temp{os.sep}{i}.png",
+            "ANIAnimator_temp{0}{1}.png".format(os.sep, i),
             width=width,
             height=height,
             bonds_param=bonds_param,
             camera=camera
         )
-        pngfiles.append(f"ANIAnimator_temp{os.sep}{i}.png")
+        pngfiles.append("ANIAnimator_temp{0}{1}.png".format(os.sep, i))
     return pngfiles

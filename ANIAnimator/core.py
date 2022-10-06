@@ -23,17 +23,17 @@ def animate(anifile=None, width=None, height=None, loop=None, bonds_param=None, 
     imgfiles = write_pngs(write_xyzs(split_ani(anifile)), width, height, bonds_param, camera)
     print()
     for i, imgfile in enumerate(imgfiles):
-        print(f"Creating GIF ({i + 1}/{len(imgfiles)})", end="\r")
+        print("Creating GIF ({i + 1}/{0})", end="\r".format(len(imgfiles)))
         new_frame = Image.open(imgfile)
         frames.append(new_frame)
-    frames[0].save(f"{fname}.gif",
+    frames[0].save("{0}.gif".format(fname),
                    format="GIF",
                    append_images=frames[1:],
                    save_all=True,
                    duration=300,
                    loop=loop,
                    disposal=2)
-    print(f"\n{fname}.gif is created")
+    print("\n{0}.gif is created".format(fname))
     print("Deleting directory ANIAnimator_temp")
     shutil.rmtree("ANIAnimator_temp")
     print("Directory ANIAnimator_temp is deleted")

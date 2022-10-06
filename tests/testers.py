@@ -17,8 +17,8 @@ MPATH = mfile.replace("/ANIAnimator/__init__.py", "")
 
 def clear_temp():
     """Clears the temp folder"""
-    for filename in os.listdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp"):
-        filepath = os.path.join(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp", filename)
+    for filename in os.listdir("{0}{1}tests{1}assets{1}temp".format(MPATH, os.sep)):
+        filepath = os.path.join("{0}{1}tests{1}assets{1}temp".format(MPATH, os.sep), filename)
         if os.path.isfile(filepath) or os.path.islink(filepath):
             os.unlink(filepath)
         elif os.path.isdir(filepath):
@@ -28,12 +28,12 @@ def clear_temp():
 def sort_(files):
     """Naive sort function for files"""
     sortedfiles = []
-    match = [re.search(rf"{os.sep}([0-9]+)\.[A-Za-z]+", file) for file in files]
+    match = [re.search(r"{0}([0-9]+)\.[A-Za-z]+".format(os.sep), file) for file in files]
     sortedmatch = [[m[0], m[1]] for m in match]
     sortedmatch = [x for _, x in sorted(zip([int(m[1]) for m in sortedmatch], sortedmatch))]
     for s in sortedmatch:
         for file in files:
-            filematch = re.search(rf"{os.sep}[0-9]+\.[A-Za-z]+", file)
+            filematch = re.search(r"{0}[0-9]+\.[A-Za-z]+".format(os.sep), file)
             if s[0] == filematch[0] and file not in sortedfiles:
                 sortedfiles.append(file)
     return sortedfiles
@@ -49,7 +49,7 @@ def animate_tester(anifile=None, width=None, height=None, loop=None, bonds_param
         loop=loop,
         bonds_param=bonds_param
     )
-    return list(glob.glob(f"{fname}.gif"))
+    return list(glob.glob("{0}.gif".format(fname)))
 
 
 def split_ani_tester(anifile):

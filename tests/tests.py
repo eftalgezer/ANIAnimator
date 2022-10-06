@@ -21,20 +21,20 @@ MPATH = mfile.replace("/ANIAnimator/__init__.py", "")
 def test_animate():
     """Tests for animate"""
     shutil.copy(
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
+        "{0}{1}tests{1}assets{1}ANI{1}C-merged.ANI".format(MPATH, os.sep),
+        "{0}{1}tests{1}assets{1}temp{1}C-merged.ANI".format(MPATH, os.sep)
     )
-    os.chdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp")
+    os.chdir("{0}{1}tests{1}assets{1}temp".format(MPATH, os.sep))
     assert animate_tester("C-merged.ANI") == glob.glob("C-merged.gif")
 
 
 def test_split_ani():
     """Tests for split_ani"""
     shutil.copy(
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
+        "{0}{1}tests{1}assets{1}ANI{1}C-merged.ANI".format(MPATH, os.sep),
+        "{0}{1}tests{1}assets{1}temp{1}C-merged.ANI".format(MPATH, os.sep)
     )
-    os.chdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp")
+    os.chdir("{0}{1}tests{1}assets{1}temp".format(MPATH, os.sep))
     assert split_ani_tester("C-merged.ANI") == [
         (
             "    2\n \nC       0.037417    0.000000   -0.000000\nC       1.962580   -0.000000   -0.000000\n",
@@ -168,27 +168,27 @@ def test_split_ani():
 def test_write_xyzs():
     """Tests for write_xyzs"""
     shutil.copy(
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
+        "{0}{1}tests{1}assets{1}ANI{1}C-merged.ANI".format(MPATH, os.sep),
+        "{0}{1}tests{1}assets{1}temp{1}C-merged.ANI".format(MPATH, os.sep)
     )
-    os.chdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp")
+    os.chdir("{0}{1}tests{1}assets{1}temp".format(MPATH, os.sep))
     assert write_xyzs_tester(split_ani_tester("C-merged.ANI")) == sort_(glob.glob("ANIAnimator_temp/*.xyz"))
 
 
 def test_write_pngs():
     """Tests for write_pngs"""
     shutil.copy(
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
+        "{0}{1}tests{1}assets{1}ANI{1}C-merged.ANI".format(MPATH, os.sep),
+        "{0}{1}tests{1}assets{1}temp{1}C-merged.ANI".format(MPATH, os.sep)
     )
-    os.chdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp")
+    os.chdir("{0}{1}tests{1}assets{1}temp".format(MPATH, os.sep))
     assert write_pngs_tester(write_xyzs_tester(split_ani_tester("C-merged.ANI"))) == sort_(
         glob.glob("ANIAnimator_temp/*.png"))
 
 def test_main():
     shutil.copy(
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}ANI{os.sep}C-merged.ANI",
-        f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp{os.sep}C-merged.ANI"
+        "{0}{1}tests{1}assets{1}ANI{1}C-merged.ANI".format(MPATH, os.sep),
+        "{0}{1}tests{1}assets{1}temp{1}C-merged.ANI".format(MPATH, os.sep)
     )
-    os.chdir(f"{MPATH}{os.sep}tests{os.sep}assets{os.sep}temp")
+    os.chdir("{0}{1}tests{1}assets{1}temp".format(MPATH, os.sep))
     assert "is created" in main_tester("ANIAnimator C-merged.ANI")

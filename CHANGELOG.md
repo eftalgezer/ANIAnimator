@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.0.1](https://github.com/eftalgezer/ANIAnimator/tree/v0.1.0) (2022-10-01)
+## [v0.1.0](https://github.com/eftalgezer/ANIAnimator/tree/v0.1.0) (2022-10-01)
 
 Camera is added
 
