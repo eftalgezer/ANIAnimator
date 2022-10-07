@@ -15,7 +15,7 @@ from .testers import (
     main_tester
 )
 
-MPATH = mfile.replace("{0}ANIAnimator{0}__init__.py".format(os.sep), "")
+MPATH = mfile.replace("{0}ANIAnimator{0}__init__.py".format(os.sep), "").replace("ANIAnimatorc", "ANIAnimator")
 
 
 def test_animate():
