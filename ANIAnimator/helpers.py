@@ -51,7 +51,7 @@ def write_pngs(xyzfiles, width=None, height=None, bonds_param=None, camera=None)
     if bonds_param is None:
         bonds_param = 1.3
     pngfiles = []
-    print()
+    print("")
     for i, xyzfile in enumerate(xyzfiles):
         molecules = mogli.read(xyzfile)
         print("Creating png files ({0}/{1})".format(i + 1, len(xyzfiles), end="\r"))
