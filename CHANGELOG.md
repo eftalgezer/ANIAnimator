@@ -2,7 +2,8 @@
 
 ## [v0.2.1](https://github.com/eftalgezer/ANIAnimator/tree/v0.2.2) (2023-01-28)
 
-Bug fix
+- Bug fix
+- Python 3.11
 
 **Full Changelog**: https://github.com/eftalgezer/ANIAnimator/compare/v0.2.1...v0.2.2
 
