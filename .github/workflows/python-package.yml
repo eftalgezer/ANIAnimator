@@ -46,7 +46,7 @@ jobs:
         pytest --cov=./ --cov-report=xml
         codecov
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4.6.0
+      uses: codecov/codecov-action@v5.0.0
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         directory: ./coverage/reports/
